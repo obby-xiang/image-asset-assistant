@@ -1,7 +1,7 @@
 {
   "name": "image-asset-assistant",
   "version": "0.0.0",
-  "main": "main.js",
+  "main": "./desktop/main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,6 +12,8 @@
     "dist": "vite build && electron-builder --config electron-builder.config.js"
   },
   "dependencies": {
+    "element-plus": "^2.2.20",
+    "lodash": "^4.17.21",
     "pinia": "^2.0.21",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
@@ -21,11 +23,14 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "autoprefixer": "^10.4.13",
     "electron": "^21.2.2",
     "electron-builder": "^23.6.0",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
+    "postcss": "^8.4.18",
     "prettier": "^2.7.1",
+    "tailwindcss": "^3.2.2",
     "vite": "^3.0.9"
   }
 }
