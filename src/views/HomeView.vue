@@ -32,14 +32,31 @@
         </el-button>
       </div>
 
-      <div class="tw-grid tw-grid-cols-4 tw-justify-items-center">
-        <div v-for="item in iconData.icons" :key="item.id" class="">
+      <div
+        class="tw-grid tw-justify-items-center tw-justify-items-stretch tw-grid-cols-4 lg:tw-grid-cols-6 tw-gap-x-4 tw-gap-3"
+      >
+        <div
+          v-for="item in iconData.icons"
+          :key="item.id"
+          class="tw-flex tw-flex-col tw-cursor-pointer tw-pt-10 tw-pb-8 tw-px-3 hover:tw-rounded-lg hover:tw-bg-gray-100"
+        >
           <img
             :alt="item.nameCn"
             :src="`data:image/svg+xml;base64,${Base64.encode(item.svgCode)}`"
+            class="tw-mx-auto"
             height="40"
             width="40"
           />
+          <span
+            class="tw-mx-auto tw-max-w-full tw-whitespace-normal tw-break-words tw-mt-4"
+          >
+            {{ item.nameCn }}
+          </span>
+          <span
+            class="tw-mx-auto tw-max-w-full tw-whitespace-normal tw-break-words tw-mt-3"
+          >
+            {{ item.fileName }}
+          </span>
         </div>
       </div>
     </el-main>
